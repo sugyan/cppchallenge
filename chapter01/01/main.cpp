@@ -1,6 +1,6 @@
 #include <iostream>
 
-int main(int, char**)
+int main()
 {
     unsigned int limit = 0;
     std::cout << "limit: ";
