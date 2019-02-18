@@ -19,17 +19,15 @@ bool is_prime(const int n)
     return true;
 }
 
-int main()
-{
+int main() {
     unsigned int limit;
     std::cin >> limit;
 
-    for (int n = limit; n > 1; n--)
+    for (int n = 2; n <= limit; n++)
     {
-        if (is_prime(n))
+        if (is_prime(n) && is_prime(n + 6))
         {
-            std::cout << n << std::endl;
-            return 0;
+            std::cout << n << ", " << n + 6 << std::endl;
         }
     }
 }
