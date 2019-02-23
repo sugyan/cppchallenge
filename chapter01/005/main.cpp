@@ -10,7 +10,8 @@ bool is_prime(const int n)
     {
         return false;
     }
-    for (int i = 5; i * i <= n; i += 6) {
+    for (int i = 5; i * i <= n; i += 6)
+    {
         if (n % i == 0 || n % (i + 2) == 0)
         {
             return false;
@@ -19,11 +20,12 @@ bool is_prime(const int n)
     return true;
 }
 
-int main() {
+int main()
+{
     unsigned int limit;
     std::cin >> limit;
 
-    for (int n = 2; n <= limit; n++)
+    for (int n = 2; n <= limit; ++n)
     {
         if (is_prime(n) && is_prime(n + 6))
         {
