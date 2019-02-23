@@ -16,17 +16,17 @@ unsigned int sum_proper_divisors(unsigned int const n)
 
 int main()
 {
-    unsigned int limit;
-    std::cin >> limit;
-
-    for (int n = 10; n <= limit; ++n)
+    unsigned int limit = 1000000;
+    for (unsigned int n = 1; n < limit; ++n)
     {
-        auto sum = sum_proper_divisors(n);
-        if (sum > n)
+        auto sum1 = sum_proper_divisors(n);
+        if (sum1 < limit)
         {
-            std::cout
-                << n
-                << " abudance: " << sum - n << std::endl;
+            auto sum2 = sum_proper_divisors(sum1);
+            if (sum2 == n && n != sum1 && n < sum1)
+            {
+                std::cout << n << ", " << sum1 << std::endl;
+            }
         }
     }
 }
