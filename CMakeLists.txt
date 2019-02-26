@@ -14,6 +14,7 @@ add_subdirectory(chapter01/004)
 add_subdirectory(chapter01/005)
 add_subdirectory(chapter01/006)
 add_subdirectory(chapter01/007)
+add_subdirectory(chapter01/008)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
